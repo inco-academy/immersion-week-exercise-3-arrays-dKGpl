@@ -1,5 +1,12 @@
-module.exports = function evenIndexes() {
-  // TODO Implement me.
+module.exports = evenIndexes
+
+function evenIndexes(inputStr) {
+  const inputStrTab = [...inputStr]
+  let outputTab = []
+  for(const [index, element] of inputStrTab.entries()) {
+      if(index%2 === 0) outputTab.push(element)
+  }
+  return outputTab
 };
 
 /**Weryfikacja */

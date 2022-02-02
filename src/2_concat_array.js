@@ -1,5 +1,7 @@
-module.exports = function concatArray() {
-  // TODO Implement me.
+module.exports = concatArray
+
+function concatArray(inputTab) {
+  return inputTab.join(" ") + "."
 };
 
 /* Weryfikacja */

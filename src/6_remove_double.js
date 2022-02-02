@@ -1,5 +1,18 @@
-module.exports = function removeDouble() {
-  // TODO Implement me.
+module.exports = removeDouble
+
+function removeDouble(inputTable) {
+  for(compElem of inputTable) {
+       let duplicateIndexes = []
+       for(const [index, element] of inputTable.entries()) {
+           if(compElem === element) duplicateIndexes.push(index)
+       }
+       if(duplicateIndexes.length > 1) {
+           for(let i = 0; i< duplicateIndexes.length -1; i++) {
+               inputTable.splice(duplicateIndexes[i],1)
+           }
+       }
+  }
+  return inputTable
 };
 
 /**Weryfikacja */
