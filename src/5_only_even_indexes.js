@@ -1,10 +1,9 @@
 module.exports = evenIndexes
 
 function evenIndexes(inputStr) {
-  const inputStrTab = [...inputStr]
   let outputTab = []
-  for(const [index, element] of inputStrTab.entries()) {
-      if(index%2 === 0) outputTab.push(element)
+  for(i = 0; i < inputStr.length; i+=2) {
+      outputTab.push(inputStr[i])
   }
   return outputTab
 };
